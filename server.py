@@ -2,12 +2,14 @@ import os
 from dotenv import load_dotenv
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel
-from daytona_tool import run_python
+from daytona_tool import run_python, get_sandbox
 
 load_dotenv()
 SECRET = os.environ["SERVER_SECRET"]
 
 app = FastAPI()
+
+get_sandbox()
 
 
 class CodeRequest(BaseModel):
