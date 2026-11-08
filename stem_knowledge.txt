@@ -1,0 +1,20 @@
+AUTOCAD COMMAND REFERENCE
+LINE (L): draw straight line segments.
+CIRCLE (C): draw a circle by center and radius or diameter.
+OFFSET (O): create a parallel copy of a line, polyline, or curve at a set distance.
+TRIM (TR): cut objects back to a cutting edge.
+EXTEND (EX): lengthen objects to meet a boundary.
+FILLET (F): round or square off the corner between two lines. Radius 0 makes a sharp corner.
+MOVE (M) and COPY (CO): relocate or duplicate objects using a base point.
+ROTATE (RO) and SCALE (SC): turn or resize objects around a base point.
+HATCH (H): fill a closed area with a pattern.
+LAYER (LA): open the layer manager.
+DIMLINEAR (DLI): add a horizontal or vertical dimension.
+EXTRUDE (EXT): turn a closed 2D shape into a 3D solid by giving it height.
+PRESSPULL (PRESS): push or pull a bounded area to add or remove 3D volume.
+
+FUSION 360 BASICS
+Sketch (S), Line (L), Rectangle (R), Circle (C), Offset (O), Trim (T), Dimension (D).
+Extrude (E): give a sketch profile thickness. Fillet (F): round edges.
+Press Pull (Q): push or pull faces directly.
+Workflow: sketch, constrain and dimension, extrude, then add fillets and holes.
