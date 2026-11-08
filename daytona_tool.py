@@ -1,4 +1,5 @@
 import os
+import json
 from dotenv import load_dotenv
 from daytona import Daytona, DaytonaConfig
 
@@ -22,3 +23,22 @@ def run_python(code: str) -> str:
     except Exception:
         _sandbox = None
         return get_sandbox().process.code_run(code).result
+
+
+def save_entry(problem: str, answer: str) -> str:
+    entry = json.dumps({"problem": problem, "answer": answer})
+    code = (
+        "import json\n"
+        f"entry = json.loads({entry!r})\n"
+        "with open('notebook.jsonl', 'a') as f:\n"
+        "    f.write(json.dumps(entry) + '\\n')\n"
+        "print('saved')"
+    )
+    return run_python(code)
+
+
+def read_notebook() -> str:
+    return run_python(
+        "import os\n"
+        "print(open('notebook.jsonl').read() if os.path.exists('notebook.jsonl') else '(empty)')"
+    )
